@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
-import { ProjectListScreen } from './views/project-list';
+import React from "react";
+import "./App.css";
+import { ProjectListScreen } from "./views/project-list";
 
 function App() {
   return (

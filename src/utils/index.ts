@@ -16,7 +16,7 @@ export const cleanObject = (object: object) => {
   return result;
 };
 
-export const useDebounce = (value: any, delay: number) => {
+export const useDebounce = <T>(value: T, delay: number) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
 
   useEffect(() => {

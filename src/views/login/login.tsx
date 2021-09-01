@@ -3,7 +3,7 @@ import React, { FormEvent } from "react";
 const apiUrl = process.env.REACT_APP_API_URL;
 
 const login = (param: { username: string; password: string }) => {
-  fetch(`${apiUrl}/login`, {
+  fetch(`${apiUrl}/register`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -33,7 +33,7 @@ export const LoginForm = () => {
         <label htmlFor={"password"}>密码：</label>
         <input type="password" id={"password"}></input>
       </div>
-      <button type="submit">登录</button>
+      <button type="submit">注册</button>
     </form>
   );
 };

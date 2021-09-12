@@ -1,15 +1,17 @@
 import React from "react";
 import "./App.css";
-import { ProjectListScreen } from "./views/project-list";
-import { LoginForm } from "./views/login/login";
+import { useAuth } from "./context/auth-context";
+import { AuthenticatedApp } from "./authenticated-app";
+import { UnauthenticatedApp } from "./unauthenticated-app";
 
 // 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
 
 function App() {
+  const { user } = useAuth();
+
   return (
     <div className="App">
-      {/* <ProjectListScreen /> */}
-      <LoginForm />
+      {user ? <AuthenticatedApp /> : <UnauthenticatedApp />}
     </div>
   );
 }
